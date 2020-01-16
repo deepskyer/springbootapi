@@ -38,6 +38,6 @@ public class TopicService {
     }
 
     public void deleteTopic(String id){
-        topics.remove(topics.stream().filter(t -> t.getId().equals(id)).findFirst().get());
+        topics.removeIf(t -> t.getId().equals(id));
     }
 }
